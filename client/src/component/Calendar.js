@@ -76,7 +76,7 @@ export default function (props) {
     }
     const config = { headers: { "Content-Type": "application/json" } }
     try {
-      await axios.post('http://13.127.187.6:9001/create-event', payload, config);
+      await axios.post('http://13.232.52.143:9001/create-event', payload, config);
       toast.success("Event is Confirmed 😊", {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 2000,
@@ -101,7 +101,7 @@ export default function (props) {
 
   //Calendar Display
   useEffect(() => {
-    axios.get('http://13.127.187.6:9001/get-events')
+    axios.get('http://13.232.52.143:9001/get-events')
       .then((d) => {
         const cdata = d.data.map(item => {
           return { username: item.username, title: item.title, date: item.StartTime, EndTime: item.EndTime, User: item.User }
@@ -121,7 +121,7 @@ export default function (props) {
     const myString = objectId.replace(/^"(.*)"$/, '$1');
     console.log("Hello wolld")
     console.log(myString)
-    axios.get(`http://13.127.187.6:9001/getuserevent/${myString}`)
+    axios.get(`http://13.232.52.143:9001/getuserevent/${myString}`)
       .then((d) => {
         setEventData(d.data.events)
         console.log(d)
@@ -146,7 +146,7 @@ export default function (props) {
     }
     console.log(Credentials.StartTime)
     console.log(Credentials.EndTime)
-    axios.put(`http://13.127.187.6:9001/update-event/${id}`, Credentials)
+    axios.put(`http://13.232.52.143:9001/update-event/${id}`, Credentials)
       .then((d) => {
         setData(d.data)
         toast.success("Event updated successfully 😊", {
@@ -169,7 +169,7 @@ export default function (props) {
 
   const handleDelete = () => {
 
-    axios.delete(`http://13.127.187.6:9001/delete-event/${id}`)
+    axios.delete(`http://13.232.52.143:9001/delete-event/${id}`)
       .then((d) => {
         setData(d.data)
         toast.success("Event deleted successfully 😊", {

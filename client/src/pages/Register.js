@@ -22,7 +22,7 @@ function Register() {
       password: password,
     };
     axios
-      .post("http://13.127.187.6:9001/user/signup", data)
+      .post("http://13.232.52.143:9001/user/signup", data)
       .then((res) => {
         toast.success("Registration is Success 😊", {
           position: toast.POSITION.TOP_RIGHT,

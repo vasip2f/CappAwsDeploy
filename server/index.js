@@ -8,7 +8,7 @@ const path = require('path')
 const corsOptions = {
   // origin: "https://conference-room-booking-fe.onrender.com", // frontend URI (ReactJS)
 
-  origin: 'http://13.127.187.6:3000',
+  origin: 'http://13.232.52.143:3000',
   methods: ['GET', 'PUT', 'POST', 'DELETE'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }

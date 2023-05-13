@@ -151,7 +151,7 @@ function Login() {
     localStorage.setItem("objectId", objectId)
 
     axios
-      .post("http://13.127.187.6:9001/user/login", data)
+      .post("http://13.232.52.143:9001/user/login", data)
       .then((res) => {
         toast.success("Login Success 😊", {
           position: toast.POSITION.TOP_RIGHT,
